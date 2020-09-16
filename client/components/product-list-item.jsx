@@ -13,7 +13,7 @@ function ProductListItem(props) {
 
   return (
     <div className="col-4 product-card d-flex align-items-stretch">
-      <div className="card">
+      <div onClick={() => props.setView('details', { productId: props.product.productId, dollars: dollars, cents: cents })} className="card">
         <img height="200" src={props.product.image} className="card-img-top product-image" alt={props.product.name} />
         <div className="card-body">
           <h5 className="card-title">{props.product.name}</h5>
