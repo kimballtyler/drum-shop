@@ -1,1 +1,7 @@
-/* not empty */
+.product-image {
+  object-fit: scale-down;
+}
+
+.product-card {
+  margin-bottom: 54px;
+}
