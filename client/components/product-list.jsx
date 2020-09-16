@@ -22,13 +22,12 @@ class ProductList extends React.Component {
           {
             this.state.products.map(product => {
               return (
-                <ProductListItem key={product.name} product={product} />
+                <ProductListItem setView={this.props.setView} key={product.name} product={product} />
               );
             })
           }
         </div>
       </div>
-
     );
   }
 }

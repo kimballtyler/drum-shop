@@ -4,4 +4,9 @@
 
 .product-card {
   margin-bottom: 54px;
+  cursor: pointer;
+}
+
+.back-to-catalog {
+  cursor: pointer;
 }
