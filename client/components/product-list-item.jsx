@@ -22,7 +22,6 @@ function ProductListItem(props) {
         </div>
       </div>
     </div>
-
   );
 }
 
