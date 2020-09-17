@@ -130,24 +130,23 @@ app.post('/api/cart', (req, res, next) => {
           values (default, default)
           returning "cartId"
       `;
-      const promise = (db.query(sql)
+      return db.query(sql)
         .then(data => {
           const cartIdPrice = {
             cartId: data.rows[0].cartId,
             price: result.rows[0].price
           };
           return cartIdPrice;
-        }));
-      return Promise.all([promise]);
+        });
     })
     .then(data => {
-      req.session.cartId = data[0].cartId;
+      req.session.cartId = data.cartId;
       const sql = `
         insert into "cartItems" ("cartId", "productId", "price")
           values ($1, $2, $3)
           returning "cartItemId"
       `;
-      const params = [data[0].cartId, req.body.productId, data[0].price];
+      const params = [data.cartId, req.body.productId, data.price];
       return db.query(sql, params);
     })
     .then(result => {
