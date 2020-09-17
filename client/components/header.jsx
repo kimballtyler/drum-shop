@@ -1,11 +1,17 @@
 import React from 'react';
 
 function Header(props) {
+  const cartText = props.cartItemCount === 1 ? 'item' : 'items';
   return (
     <nav className="navbar navbar-light bg-dark">
-      <a className="navbar-brand text-white ml-5" href="#">
+      <div className="navbar-brand text-white ml-5" href="#">
         <img src="https://www.creativefabrica.com/wp-content/uploads/2019/03/Monogram-WS-Logo-Design-by-Greenlines-Studios.jpg" width="30" height="30" className="d-inline-block align-top mr-1"/>
-          Wicked Sales</a>
+          Wicked Sales
+      </div>
+      <div className="text-white mr-5">
+        <span className="mr-2">{`${props.cartItemCount} ${cartText}`}</span>
+        <i className="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+      </div>
     </nav>
   );
 }
