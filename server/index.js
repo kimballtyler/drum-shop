@@ -70,7 +70,7 @@ app.get('/api/products/:productId', (req, res, next) => {
 
 app.get('/api/cart', (req, res, next) => {
   if (!('cartId' in req.session) || req.session.cartId === '') {
-    res.json([]);
+    return res.json([]);
   }
   const sql = `
     select "c"."cartItemId",
@@ -119,10 +119,10 @@ app.post('/api/cart', (req, res, next) => {
         });
       }
       if ('cartId' in req.session) {
-        const cartIdPrice = [{
+        const cartIdPrice = {
           cartId: req.session.cartId,
           price: result.rows[0].price
-        }];
+        };
         return cartIdPrice;
       }
       const sql = `

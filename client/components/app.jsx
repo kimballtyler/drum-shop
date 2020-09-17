@@ -39,7 +39,9 @@ export default class App extends React.Component {
   getCartItems() {
     fetch('/api/cart')
       .then(response => response.json())
-      .then(data => this.setState({ cart: data }));
+      .then(data => {
+        this.setState({ cart: data });
+      });
   }
 
   setView(name, params) {
@@ -61,7 +63,7 @@ export default class App extends React.Component {
       return (
         <div>
           <Header setView={this.setView} cartItemCount={this.state.cart.length} />
-          <CartSummary cart={this.state.cart} />
+          <CartSummary setView={this.setView} cart={this.state.cart} />
         </div>
       );
     } else {

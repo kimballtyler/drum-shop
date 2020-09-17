@@ -13,26 +13,27 @@ function CartSummary(props) {
   }
   if (props.cart.length === 0) {
     return (
-      <div>
+      <div className="container mt-3">
+        <a onClick={() => props.setView('catalog', {})} className="text-muted  back-to-catalog mb-4">&lt; Back to catalog</a>
         <h1>My Cart</h1>
         <p>There are no items in your cart</p>
       </div>
     );
   }
   return (
-    <div className="container mt-5">
-      <a onClick={() => props.setView('catalog', {})} className="text-muted pl-4 mb-4 back-to-catalog">&lt; Back to catalog</a>
-      <h1>My Cart</h1>
-      <div className="card-deck">
+    <div className="container mt-4">
+      <a onClick={() => props.setView('catalog', {})} className="text-muted  back-to-catalog">&lt; Back to catalog</a>
+      <h2 className="mt-3 mb-4">My Cart</h2>
+      <div className="container">
         {
           props.cart.map(item => {
             return (
-              <CartSummaryItem dollars={dollars} cents={cents} key={item.cartItemId} item={item} />
+              <CartSummaryItem key={item.cartItemId} item={item} />
             );
           })
         }
       </div>
-      <p>{`Item Total $${dollars}.${cents}`}</p>
+      <h5 className="pb-4 pt-3">{`Item Total $${dollars}.${cents}`}</h5>
     </div>
   );
 }
