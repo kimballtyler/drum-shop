@@ -29,7 +29,7 @@ Try the live site here: https://drumshop.tylerkimball.com/
 
 ## Preview
 
-![Drum Shop](server/public/images/demo.mp4)
+![Drum Shop](server/public/images/demo.gif)
 
 ## Development
 
