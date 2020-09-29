@@ -10,7 +10,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: { name: 'checkout', params: {} },
+      view: { name: 'catalog', params: {} },
       cart: [],
       modalOpen: true
     };
