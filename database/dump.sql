@@ -266,21 +266,21 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 -- Name: cartItems_cartItemId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 476, true);
+SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 484, true);
 
 
 --
 -- Name: carts_cartId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."carts_cartId_seq"', 83, true);
+SELECT pg_catalog.setval('public."carts_cartId_seq"', 87, true);
 
 
 --
 -- Name: orders_orderId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."orders_orderId_seq"', 12, true);
+SELECT pg_catalog.setval('public."orders_orderId_seq"', 16, true);
 
 
 --
