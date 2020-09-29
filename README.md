@@ -1,5 +1,5 @@
 # Drum Shop
-A full stack Node.js and React shopping cart app.
+A full stack e-commerce website that allows users to shop, add desired products to a cart, and place orders.
 
 ## Live Demo
 
