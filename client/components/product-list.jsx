@@ -19,7 +19,7 @@ class ProductList extends React.Component {
     return (
       <div className="container">
         <div className="text-center mb-3">
-          <iframe width="100%" height="400px" src="https://www.youtube.com/embed/KTBrSa5S6qI?autoplay=1&mute=1&loop=1&playlist=KTBrSa5S6qI" frameBorder="0"></iframe>
+          <iframe width="100%" height="400px" src="https://www.youtube.com/embed/KTBrSa5S6qI?autoplay=1&mute=1&loop=1&playlist=KTBrSa5S6qI&playsinline=1" frameBorder="0"></iframe>
         </div>
         <div className="card-deck">
           {
