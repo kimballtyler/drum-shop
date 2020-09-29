@@ -28,6 +28,7 @@ class CheckoutForm extends React.Component {
     };
     this.handleReset();
     this.props.placeOrder(order);
+    this.props.setView('checkout', {});
   }
 
   handleReset() {
@@ -78,7 +79,7 @@ class CheckoutForm extends React.Component {
             </div>
             <div className="d-flex justify-content-between mt-3">
               <a onClick={() => this.props.setView('catalog', {})} className="text-muted mt-3 mb-4 back-to-catalog">&lt; Continue Shopping</a>
-              <button onClick={() => this.props.setView('checkout', {})} className="mt-3 mb-4 btn btn-primary">Place Order</button>
+              <button className="mt-3 mb-4 btn btn-primary">Place Order</button>
             </div>
           </form>
         </div>
