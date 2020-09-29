@@ -17,7 +17,10 @@ class ProductList extends React.Component {
 
   render() {
     return (
-      <div className="container mt-5">
+      <div className="container">
+        <div className="text-center mb-3">
+          <iframe width="100%" height="400px" src="https://www.youtube.com/embed/KTBrSa5S6qI?autoplay=1&mute=1&loop=1&playlist=KTBrSa5S6qI" frameBorder="0"></iframe>
+        </div>
         <div className="card-deck">
           {
             this.state.products.map(product => {
